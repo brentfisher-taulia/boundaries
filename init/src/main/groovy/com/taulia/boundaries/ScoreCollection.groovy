@@ -1,8 +1,5 @@
 package com.taulia.boundaries
 
-/**
- * Created by brent.fisher on 9/12/16.
- */
 class ScoreCollection {
   private List<Scoreable> scores = new ArrayList<Scoreable>()
 
