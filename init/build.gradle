@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+// tag::repositories[]
+repositories {
+  mavenCentral()
+}
+// end::repositories[]
+
+// tag::dependencies[]
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+  compile "joda-time:joda-time:2.2"
+  compile "junit:junit:4.12"
+  compile "org.codehaus.groovy:groovy-all:2.4.3"
+
+
+}
+// end::dependencies[]
+
