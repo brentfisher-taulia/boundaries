@@ -1,12 +1,14 @@
 package com.taulia.boundaries
 
+import org.joda.time.DateTime
+
 class TimeTraveller {
-  Date getActiveDate() {
+  DateTime getActiveDate() {
     return activeDate
   }
-  Date activeDate
+  DateTime activeDate
   void openAccount(){
-    Date now = new Date()
+    DateTime now = new DateTime()
     if(isOnWeekEndOrHoliday()){
       activeDate = nextBusinessDay()
     } else {
