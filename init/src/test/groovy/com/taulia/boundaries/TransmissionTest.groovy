@@ -18,7 +18,7 @@ class TransmissionTest {
   public void remainsInDriveAfterAcceleration() {
     transmission.shift(Gear.DRIVE)
     car.accelerateTo(35)
-    assertThat(transmission.getGear(), equalTo(Gear.DRIVE))
+    assert transmission.getGear() == Gear.DRIVE
   }
 
 
@@ -32,7 +32,7 @@ class TransmissionTest {
 
     transmission.shift(Gear.PARK)
 
-    assertThat(transmission.getGear(), equalTo(Gear.DRIVE))
+    assert transmission.getGear() == Gear.DRIVE
   }
 
   @Test
@@ -43,6 +43,6 @@ class TransmissionTest {
 
     transmission.shift(Gear.PARK)
 
-    assertThat(transmission.getGear(), equalTo(Gear.PARK))
+    assert transmission.getGear() == Gear.PARK
   }
 }
