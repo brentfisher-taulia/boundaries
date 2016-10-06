@@ -36,12 +36,21 @@ class BearingTest {
   }
 
   class Bearing {
-    static int MAX
+    static int MAX = 359
+    private int num
 
     Bearing(int num) {
-
+      if(num<00 || num > MAX)
+        throw new BearingOutOfRangeException()
+      this.num = num
     }
 
-    def angleBetween(Bearing bearing) {}
+    def angleBetween(Bearing bearing) {
+      this.num - bearing.num
+    }
+
+    int value() {
+      num
+    }
   }
 }
