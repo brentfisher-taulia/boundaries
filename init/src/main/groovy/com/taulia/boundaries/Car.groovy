@@ -7,4 +7,8 @@ class Car {
   def accelerateTo(int velocity) {
     this.velocity = velocity
   }
+
+  def brakeToStop() {
+    this.velocity = 0
+  }
 }
