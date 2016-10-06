@@ -21,10 +21,6 @@ class TransmissionTest {
     assert transmission.getGear() == Gear.DRIVE
   }
 
-
-
-
-
   @Test
   public void ignoresShiftToParkWhileInDrive() {
     transmission.shift(Gear.DRIVE)
@@ -44,5 +40,13 @@ class TransmissionTest {
     transmission.shift(Gear.PARK)
 
     assert transmission.getGear() == Gear.PARK
+  }
+
+  @Test
+  public void allowShiftToDriveWhileInPark() {
+    transmission.shift(Gear.PARK)
+    transmission.shift(Gear.DRIVE)
+
+    assert transmission.getGear() == Gear.DRIVE
   }
 }
