@@ -1,14 +1,18 @@
 package com.taulia.boundaries
 
 
-class Car {
-  int velocity
+class Car implements Moveable{
+  int mph
 
-  def accelerateTo(int velocity) {
-    this.velocity = velocity
+  @Override
+  int currentSpeedInMph() {
+    mph
   }
 
-  def brakeToStop() {
-    this.velocity = 0
+  void accelerateTo(int mph){
+    this.mph = mph
+  }
+  void brakeToStop(){
+    mph = 0
   }
 }
